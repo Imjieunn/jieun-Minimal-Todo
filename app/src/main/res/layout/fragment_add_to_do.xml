@@ -1,6 +1,10 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
     android:animateLayoutChanges="true"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,6 +21,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorPrimary"
+                android:gravity="right">
+                <Button
+                    android:id="@+id/makeToDoFloatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/round_button"
+                    android:text="저장"
+                    android:textColor="@color/white" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/editTextParentLinearLayout"
@@ -213,16 +232,6 @@
 
         </LinearLayout>
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/makeToDoFloatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:src="@drawable/ic_send_white_18dp"
-            app:fabSize="normal"
-            app:layout_anchor="@id/editTextParentLinearLayout"
-            app:layout_anchorGravity="bottom|right" />
 
     </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>

@@ -74,7 +74,7 @@ public class AddToDoFragment extends AppDefaultFragment implements DatePickerDia
     private Button mCopyClipboard;
 
     private ToDoItem mUserToDoItem;
-    private FloatingActionButton mToDoSendFloatingActionButton;
+    private  Button mToDoSendFloatingActionButton;
     public static final String DATE_FORMAT = "MMM d, yyyy";
     public static final String DATE_FORMAT_MONTH_DAY = "MMM d";
     public static final String DATE_FORMAT_TIME = "H:m";
@@ -163,7 +163,7 @@ public class AddToDoFragment extends AppDefaultFragment implements DatePickerDia
         mToDoTextBodyDescription= (EditText) view.findViewById(R.id.userToDoDescription);
         mToDoDateSwitch = (SwitchCompat) view.findViewById(R.id.toDoHasDateSwitchCompat);
 //        mLastSeenTextView = (TextView)findViewById(R.id.toDoLastEditedTextView);
-        mToDoSendFloatingActionButton = (FloatingActionButton) view.findViewById(R.id.makeToDoFloatingActionButton);
+        mToDoSendFloatingActionButton = (Button) view.findViewById(R.id.makeToDoFloatingActionButton);
         mReminderTextView = (TextView) view.findViewById(R.id.newToDoDateTimeReminderTextView);
 
 

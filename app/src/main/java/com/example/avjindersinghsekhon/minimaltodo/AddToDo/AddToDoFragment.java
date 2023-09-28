@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NavUtils;
@@ -26,6 +27,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.content.ClipboardManager;
@@ -247,6 +249,17 @@ public class AddToDoFragment extends AppDefaultFragment implements DatePickerDia
                     public void afterTextChanged(Editable s) {
                     }
                 });
+
+        // 갤러리 불러오기 (이미지 첨부)
+        ImageView imageView = (ImageView) view.findViewById(R.id.addImage);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent, 1000);
+            }
+        });
 
 
 //        String lastSeen = formatDate(DATE_FORMAT, mLastEdited);

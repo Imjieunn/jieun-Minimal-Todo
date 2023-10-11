@@ -59,8 +59,8 @@ public class AddToDoActivity extends AppDefaultActivity {
 
 
             try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), photoUri);
-                imageView.setImageBitmap(bitmap);
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), photoUri); // gallery에서 가져온 이미지
+                imageView.setImageBitmap(bitmap); // layout에 적용하기
             }catch (FileNotFoundException e){
                 e.printStackTrace();
             }catch (IOException e){

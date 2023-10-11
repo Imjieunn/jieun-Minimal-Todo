@@ -251,12 +251,14 @@ public class AddToDoFragment extends AppDefaultFragment implements DatePickerDia
                 });
 
         // 갤러리 불러오기 (이미지 첨부)
-        ImageView imageView = (ImageView) view.findViewById(R.id.addImage);
+        Button imageButton = (Button) view.findViewById(R.id.imageButton);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
+        // '+' 버튼 클릭했을 때 갤러리의 이미지 선택할 수 있게 사진 가져오기 창을 띄운다
+        imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                intent.setType("image/*");
                 startActivityForResult(intent, 1000);
             }
         });

@@ -2,16 +2,21 @@ package com.example.avjindersinghsekhon.minimaltodo.AddToDo;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.avjindersinghsekhon.minimaltodo.AppDefault.AppDefaultActivity;
 import com.example.avjindersinghsekhon.minimaltodo.R;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class AddToDoActivity extends AppDefaultActivity {
     @SuppressWarnings("deprecation")
